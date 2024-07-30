@@ -6,7 +6,7 @@
 .container {
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 2fr;
   height: 100vh;
 }
 
@@ -30,8 +30,67 @@
 .header {
   background-color: skyblue;
   grid-column: 2 / -1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+
+  .user-profile {
+    align-self: center;
+    justify-self: start;
+  }
+
+  .search-bar {
+    align-self: center;
+    justify-self: start;
+  }
+
+  .action-buttons {
+    align-self: center;
+    justify-self: start;
+  }
 }
 
 .main-content {
   background-color: greenyellow;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+
+.projects {
+  grid-row: 1 / 2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.announcement-cards {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.trending-cards {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.anouncements {
+  grid-row: 2 / 2;
+  grid-column: 1/2;
+}
+
+.trending {
+  grid-column: 2 /2;
 }
