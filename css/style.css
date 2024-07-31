@@ -73,6 +73,7 @@
 
     img {
       padding-right: 1rem;
+
       align-self: center;
       justify-self: start;
     }
@@ -84,28 +85,111 @@
 }
 
 .header {
-  background-color: skyblue;
+  background-color: #fdfaeb;
   grid-column: 2 / -1;
   display: grid;
-  border: 1px solid black;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 1fr;
+  /*border: 1px solid black;*/
+  grid-template-rows: 2fr 3fr;
+  grid-template-columns: 3fr 2fr;
 
   .user-profile {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr;
+    margin-left: 15rem;
+
+    img {
+      align-self: center;
+    }
+
+    .profile-name {
+      font-size: 20px;
+      font-weight: 800;
+      align-self: center;
+      padding-left: 1rem;
+    }
+
+    .profile-photo {
+      border-radius: 50%;
+      border: 1px dotted olivedrab;
+      width: 80px;
+      height: 80px;
+      align-self: center;
+    }
   }
 
   .search-bar {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    /*padding-top: 2rem;*/
+    align-self: center;
+    padding-left: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+  }
+
+  .profile-picture {
+    height: 100px;
+    width: 100px;
+    border: 3px dotted olivedrab;
+  }
+
+  .search-input {
+    background-color: #cdd2da;
+    height: 2.5rem;
+    font-size: 18px;
+    padding-left: 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
   }
 
   .action-buttons {
-    border: 1px solid black;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
   }
 
   .greeting {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    font-weight: 800;
+
+    padding-left: 5rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+
+    .top-greeting {
+      font-size: 18px;
+    }
+
+    .bottom-greeting {
+      font-size: 32px;
+    }
+
+    .greeting-text {
+      padding-top: 1rem;
+      padding-left: 1.5rem;
+    }
   }
+}
+
+.profile-picture {
+  border-radius: 50%;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  color: #efeeed;
+  font-weight: 800;
+  font-size: 16px;
+  background-color: #1d89c4;
+  border-radius: 50px;
+  border: none;
 }
 
 .main-content {
