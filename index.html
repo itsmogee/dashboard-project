@@ -5,47 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashboard</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Mono"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <div class="dashboard">
         <div class="logo">
+          <img
+            src="assets/monitor-dashboard.svg"
+            alt="a dashboard logo"
+            style="height: 48px; width: 48px"
+            class="filter-white"
+          />
           <h2>Dashboard</h2>
         </div>
-        <div>
-          <ul>
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
-          </ul>
+        <div class="nav">
+          <nav>
+            <ul>
+              <div class="nav-item">
+                <img
+                  src="assets/home.svg"
+                  alt="a home icon"
+                  class="nav-icon filter-white"
+                />
+                <li>Home</li>
+              </div>
+
+              <div class="nav-item">
+                <img
+                  src="assets/account.svg"
+                  alt="a home icon"
+                  class="nav-icon filter-white"
+                />
+                <li>Profile</li>
+              </div>
+              <div class="nav-item">
+                <img
+                  src="assets/message.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>Messages</li>
+              </div>
+              <div class="nav-item">
+                <img
+                  src="assets/history.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>History</li>
+              </div>
+              <div class="nav-item">
+                <img
+                  src="assets/clipboard-list.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>Tasks</li>
+              </div>
+              <div class="nav-item">
+                <img
+                  src="assets/account-group-outline.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>Communities</li>
+              </div>
+            </ul>
+          </nav>
         </div>
         <div class="help-section">
           <nav>
             <ul>
-              <li>Settings</li>
-              <li>Support</li>
-              <li>Privacy</li>
+              <div class="nav-item">
+                <img
+                  src="assets/cog.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>Settings</li>
+              </div>
+              <div class="nav-item">
+                <img
+                  src="assets/face-agent.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>Support</li>
+              </div>
+              <div class="nav-item">
+                <img
+                  src="assets/shield-account-outline.svg"
+                  alt="a home icon "
+                  class="nav-icon filter-white"
+                />
+                <li>Privacy</li>
+              </div>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="header">
+      <div class="header header-color">
         <div class="search-bar">
-          <div class="search-icon"></div>
-          <div class="search-input"></div>
-          <input type="text" />
+          <img
+            src="assets/magnify.svg"
+            alt="magnifying glass logo"
+            class="nav-icon"
+          />
+          <input class="search-input" type="text" />
         </div>
         <div class="user-profile">
-          <div class="profile-photo"></div>
-          <div class="profile-name">Morgan Oakley</div>
+          <button>
+            <embed src="assets/bell.svg" class="nav-icon" />
+          </button>
+          <!--<img src="assets/bell.svg" alt="a bell logo" class="nav-icon" />-->
+          <img
+            src="assets/robotik.jpg"
+            alt="a robot photo"
+            class="profile-photo"
+          />
+          <div class="profile-name">Robotnik Oakley</div>
         </div>
         <div class="greeting">
-          <div class="profile-photo"></div>
-          <div class="top-greeting">Hi there,</div>
-          <div class="bottom-greeting">Morgan Oakley</div>
+          <img
+            src="assets/robotik.jpg"
+            alt="a robot photo"
+            class="profile-picture"
+          />
+          <div class="greeting-text">
+            <div class="top-greeting">Hi there,</div>
+            <div class="bottom-greeting">Robotnik Oakley (@Rbtnk)</div>
+          </div>
         </div>
         <div class="action-buttons">
           <button class="new-button button">New</button>
@@ -57,16 +150,33 @@
         <div class="projects">
           <h2>Your Projects</h2>
           <div class="cards">
-            <div class="card-item">
-              <h3>Super Cool Project</h3>
+            <div class="card-item header-color">
+              <h3>
+                Super Cool Project
+                <hr />
+              </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 cursus mollis arcu, sed imperdiet massa pretium sed. Maecenas
                 sed felis felis. Suspendisse ultrices efficitur tristique.
               </p>
+              <div class="card-buttons">
+                <button>
+                  <embed src="assets/heart.svg" />
+                </button>
+                <button>
+                  <embed src="assets/comment-processing-outline.svg" />
+                </button>
+                <button>
+                  <embed src="assets/share-variant.svg" />
+                </button>
+              </div>
             </div>
-            <div class="card-item">
-              <h3>Less Cool Project</h3>
+            <div class="card-item header-color">
+              <h3>
+                Less Cool Project
+                <hr />
+              </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 semper et justo eu hendrerit. Vestibulum vel urna dapibus,
@@ -75,16 +185,44 @@
                 eleifend, massa mauris mollis eros, eget luctus enim ante eu
                 massa. Aliquam tincidunt eget neque non porttitor.
               </p>
+              <div class="card-buttons">
+                <button>
+                  <embed src="assets/heart.svg" />
+                </button>
+                <button>
+                  <embed src="assets/comment-processing-outline.svg" />
+                </button>
+                <button>
+                  <embed src="assets/share-variant.svg" />
+                </button>
+              </div>
             </div>
-            <div class="card-item">
-              <h3>Impossible App</h3>
+            <div class="card-item header-color">
+              <h3>
+                Impossible App
+                <hr />
+              </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                 accumsan a quam vel sodales. Vestibulum.
               </p>
+              <div class="card-buttons">
+                <button>
+                  <embed src="assets/heart.svg" />
+                </button>
+                <button>
+                  <embed src="assets/comment-processing-outline.svg" />
+                </button>
+                <button>
+                  <embed src="assets/share-variant.svg" />
+                </button>
+              </div>
             </div>
-            <div class="card-item">
-              <h3>Easy Peasy App</h3>
+            <div class="card-item header-color">
+              <h3>
+                Easy Peasy App
+                <hr />
+              </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 tempor mollis ligula et vulputate. Cras malesuada diam massa,
@@ -92,9 +230,23 @@
                 non egestas diam congue ut. Proin commodo id dolor quis
                 vehicula.
               </p>
+              <div class="card-buttons">
+                <button>
+                  <embed src="assets/heart.svg" />
+                </button>
+                <button>
+                  <embed src="assets/comment-processing-outline.svg" />
+                </button>
+                <button>
+                  <embed src="assets/share-variant.svg" />
+                </button>
+              </div>
             </div>
-            <div class="card-item">
-              <h3>Ad Blocker</h3>
+            <div class="card-item header-color">
+              <h3>
+                Ad Blocker
+                <hr />
+              </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 sagittis quam in urna ornare laoreet. Integer a mi in nisl
@@ -102,9 +254,23 @@
                 rutrum lorem. Praesent nec ex pharetra ex faucibus eleifend vel
                 eget felis. Donec sit amet tellus.
               </p>
+              <div class="card-buttons">
+                <button>
+                  <embed src="assets/heart.svg" />
+                </button>
+                <button>
+                  <embed src="assets/comment-processing-outline.svg" />
+                </button>
+                <button>
+                  <embed src="assets/share-variant.svg" />
+                </button>
+              </div>
             </div>
-            <div class="card-item">
-              <h3>Money Maker</h3>
+            <div class="card-item header-color">
+              <h3>
+                Money Maker
+                <hr />
+              </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 eleifend eros sed mi porttitor pretium. Maecenas vel suscipit
@@ -114,55 +280,101 @@
                 at accumsan. Proin hendrerit tempus vestibulum. Vivamus a dolor
                 vestibulum, volutpat tortor sit amet, feugiat ligula.
               </p>
+              <div class="card-buttons">
+                <button>
+                  <embed src="assets/heart.svg" />
+                </button>
+                <button>
+                  <embed src="assets/comment-processing-outline.svg" />
+                </button>
+                <button>
+                  <embed src="assets/share-variant.svg" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div class="announcements">
           <h2>Announcements</h2>
-          <div class="announcement-cards">
-            <div class="card-item-2">
+          <div class="announcement-cards header-color">
+            <div class="card-item-2 header-color">
               <h4>Site Maintenance</h4>
               <p>
                 Etiam fermentum magna et nibh ornare mattis. Nam felis ipsum,
-                tempor in elit quis, porttitor blandit justo. Proin est sapien,
-                tempor at cursus ac, efficitur id ipsum. Cras quis nunc felis.
+                tempor in elit quis, efficitur id ipsum. Cras quis nunc felis.
                 Nunc commodo mauris tortor.
               </p>
+              <hr />
             </div>
-            <div class="card-item-2">
+            <div class="card-item-2 header-color">
               <h4>Community Share Day</h4>
               <p>
                 Vivamus placerat orci quis velit lacinia, a cursus dolor
                 posuere. Praesent et metus nec elit dignissim tempor vitae vitae
-                nibh. In molestie ligula sed metus sagittis maximus. Interdum et
-                malesuada fames ac ante ipsum primis.
+                nibh.
               </p>
+              <hr />
             </div>
-            <div class="card-item-2">
+            <div class="card-item-2 header-color">
               <h4>Updated Privacy Policy</h4>
               <p>
                 Aenean commodo ante eu libero convallis bibendum. Aliquam id
-                efficitur dui. Aenean bibendum vestibulum arcu auctor faucibus.
-                Fusce id lorem porttitor, pellentesque orci non, gravida urna.
-                Sed viverra quis ante quis vulputate. Quisque at lacus.
+                efficitur dui. Quisque at lacus.
               </p>
+              <hr />
             </div>
           </div>
         </div>
         <div class="trending">
           <h2>Trending</h2>
-          <div class="trending-cards">
+          <div class="trending-cards header-color">
             <div class="trend-profile">
-              <h4>@tegan</h4>
+              <div class="info">
+                <h4>@Beemo</h4>
+                <br />
+                <p>Battery low. Shutdown.</p>
+              </div>
+              <img
+                src="assets/bmo.png"
+                alt="picture of bmo from adventure time"
+                clas="trending-img"
+              />
             </div>
             <div class="trend-profile">
-              <h4>@morgan</h4>
+              <div class="info">
+                <h4>@Bill</h4>
+                <br />
+                <p>Destroy us All.</p>
+              </div>
+              <img
+                src="assets/bill.png"
+                alt="picture of bill from bill and mandy"
+                clas="trending-img"
+              />
             </div>
             <div class="trend-profile">
-              <h4>@kendall</h4>
+              <div class="info">
+                <h4>@Patrick</h4>
+                <br />
+                <p>No this is Patrick</p>
+              </div>
+              <img
+                src="assets/patrick.png"
+                alt="picture of patrick star from spongebob"
+                clas="trending-img"
+              />
             </div>
             <div class="trend-profile">
-              <h4>@alex</h4>
+              <div class="info">
+                <h4>@Ed</h4>
+                <br />
+                <p>My parents took away the stairs because I am grounded</p>
+              </div>
+              <img
+                src="assets/ed.png"
+                alt="picture of ed from ed-edd and eddy"
+                clas="trending-img"
+              />
             </div>
           </div>
         </div>
