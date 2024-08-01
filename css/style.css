@@ -1,6 +1,29 @@
+@font-face {
+  font-family: kenyan-cofee;
+  src: url(../fonts/keynancoffee/kenyan\ coffee\ rg.otf);
+}
+
+@font-face {
+  font-family: typewriter1;
+  src: url(../fonts/rm_typerighter_medium.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family:
+    "Roboto Mono",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 .filter-white {
@@ -10,28 +33,26 @@
 
 .container {
   display: grid;
+  background-color: #141617;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr 3fr;
   height: 100vh;
 }
 
-.nav-icon {
-  width: 32px;
-  height: 32px;
-}
-
 .dashboard {
-  background-color: #1d89c4;
-  color: #efeeed;
+  background-color: #141617;
+  color: #d4be98;
+  color: #ddc7a1;
+  color: #fdfaeb;
 
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 800;
 
   grid-row: 1 / -1;
   grid-column: 1 / span 1;
   display: grid;
   grid-gap: 3rem;
-  grid-template-rows: 10% 1fr 2fr;
+  grid-template-rows: 10% 1fr 4fr;
 
   padding-left: 2rem;
 
@@ -49,6 +70,10 @@
   li {
     list-style: none;
     padding-left: 16px;
+  }
+
+  li:hover {
+    scale: 1.02;
   }
 
   .logo {
@@ -84,22 +109,31 @@
   }
 }
 
+.help-section {
+  align-self: start;
+}
+
 .header {
-  background-color: #fdfaeb;
   grid-column: 2 / -1;
   display: grid;
-  /*border: 1px solid black;*/
   grid-template-rows: 2fr 3fr;
   grid-template-columns: 3fr 2fr;
 
   .user-profile {
-    /*border: 1px solid black;*/
     display: grid;
     grid-template-columns: 1fr 1fr 5fr;
     margin-left: 15rem;
 
-    img {
+    .nav-icon {
+      width: 32px;
+      height: 32px;
       align-self: center;
+    }
+
+    button {
+      margin-right: 1rem;
+      background-color: #fdfaeb;
+      border: none;
     }
 
     .profile-name {
@@ -111,7 +145,7 @@
 
     .profile-photo {
       border-radius: 50%;
-      border: 1px dotted olivedrab;
+      border: 1px solid #7da;
       width: 80px;
       height: 80px;
       align-self: center;
@@ -119,8 +153,6 @@
   }
 
   .search-bar {
-    /*border: 1px solid black;*/
-    /*padding-top: 2rem;*/
     align-self: center;
     padding-left: 5rem;
     display: grid;
@@ -130,15 +162,15 @@
   .profile-picture {
     height: 100px;
     width: 100px;
-    border: 3px dotted olivedrab;
+    border: 3px solid #7da;
   }
 
   .search-input {
-    background-color: #cdd2da;
     height: 2.5rem;
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 1.5rem;
     width: 100%;
+    align-self: center;
     border-radius: 10px;
     border: none;
   }
@@ -151,8 +183,11 @@
     grid-gap: 2rem;
   }
 
+  button:hover {
+    scale: 1.15;
+  }
+
   .greeting {
-    /*border: 1px solid black;*/
     font-weight: 800;
 
     padding-left: 5rem;
@@ -184,26 +219,25 @@
 .button {
   width: 100px;
   height: 40px;
-  color: #efeeed;
+  color: #fdfaeb;
   font-weight: 800;
-  font-size: 16px;
-  background-color: #1d89c4;
+  font-size: 20px;
+  background-color: #141617;
   border-radius: 50px;
   border: none;
 }
 
 .main-content {
-  background-color: #cdd2da;
+  background-color: #7c6f64;
   display: grid;
   grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
 }
 
 .projects {
   grid-row: 1 / -1;
   grid-column: 1 / 2;
-  /*border: 1px solid black;*/
   margin-left: 2rem;
 
   h2 {
@@ -219,15 +253,15 @@
 
   .card-item {
     display: grid;
-    /*grid-gap: 0.5rem;*/
     grid-template-rows: 30% 40% 1fr;
-    background-color: #fdfaeb;
-    border-left: 9px solid orange;
+    border-left: 0.7rem solid #d3869b;
     max-width: 400px;
     padding: 1rem 2rem;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 30px;
-
+    box-shadow:
+      0 4px 8px 0 rgba(0, 0, 0, 0.4),
+      0 6px 20px 0 rgba(0, 0, 0, 0.4);
     h3 {
       margin-bottom: 1rem;
     }
@@ -235,6 +269,10 @@
     p {
       margin-bottom: 4rem;
     }
+  }
+
+  .card-item:hover {
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -246,10 +284,15 @@
   align-self: end;
   /*border: 1px solid #000;*/
 
-  img {
-    width: 28px;
-    height: 28px;
-    /*border: 1px solid #000;*/
+  button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #fdfaeb;
+  }
+
+  button:hover {
+    scale: 1.1;
   }
 }
 
@@ -258,31 +301,43 @@
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  background-color: #fdfaeb;
-  border-radius: 15px;
+  border-radius: 5px;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.4),
+    0 6px 20px 0 rgba(0, 0, 0, 0.4);
 
   h4 {
     margin-bottom: 0.5rem;
   }
 
   .card-item-2 {
-    background-color: #fdfaeb;
-    border-bottom: 1px dotted blue;
     padding: 0.5rem 1.5rem;
-    max-width: 250px;
+    max-width: 200px;
+
+    hr {
+      margin-top: 0.5rem;
+      color: #d3869b;
+      background-color: #d3869b;
+      /*border-left: 0.7rem solid #d3869b;*/
+      width: 90%;
+      height: 0.2rem;
+      border: none;
+    }
   }
 }
 
 .trending-cards {
-  background-color: #fdfaeb;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   border-radius: 15px;
-  padding: 1rem;
+  padding: 0.5rem;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.4),
+    0 6px 20px 0 rgba(0, 0, 0, 0.4);
 
   .trend-profile {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
     grid-column-gap: 1rem;
     align-self: start;
     grid-template-columns: 1fr 3fr;
@@ -291,12 +346,18 @@
   img {
     width: 60px;
     align-self: start;
-    border: 4px dotted goldenrod;
+    border: 2px double #7da;
     border-radius: 50%;
     height: 60px;
 
     grid-row: 1 / -1;
     grid-column: 1 / 2;
+  }
+
+  h4 {
+    color: #ea6962;
+    font-weight: 700;
+    font-size: 20px;
   }
 }
 
@@ -305,13 +366,43 @@
   grid-column: 2/3;
   margin-top: 1rem;
   padding: 0 1rem;
+  border-radius: 15px;
 
   h2 {
     margin-bottom: 1rem;
+    color: wheat;
   }
 }
 
 .trending {
   grid-column: 2 /2;
   padding: 0 1rem;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.header-color {
+  background-color: #fdfaeb;
+}
+
+.main-content,
+.search-input {
+  background: #a89984;
+  background-color: #7da;
+  h1,
+  h2 {
+    color: #141617;
+  }
+}
+
+h3 {
+  hr {
+    margin-top: 0.5rem;
+    color: #d3869b;
+    background-color: #d3869b;
+    width: 50%;
+    height: 0.2rem;
+    border: none;
+  }
 }
